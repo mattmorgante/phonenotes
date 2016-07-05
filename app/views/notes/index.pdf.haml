@@ -1,0 +1,19 @@
+.container
+  .row
+    %table.table.table-striped
+      %thead
+        %th Name
+        %th Phone Number
+        %th Date and Time
+        %th Body
+      %tbody
+        - @notes.each do |note|
+          %tr
+            %td
+              = note.name
+            %td
+              = note.phone_number
+            %td
+              = note.date_and_time
+            %td 
+              = note.body

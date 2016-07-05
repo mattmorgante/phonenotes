@@ -1,28 +1,39 @@
-== README
+# Develop an application for registering phone notes.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ 
+The application should contain the following functionalities:
+• An overview (listing) of your own notes only sorted by date/time (descending order)
+* in the notes controller, index action
+@notes = Note.all.order("created_at DESC")
 
-Things you may want to cover:
+• Editing of only your personal notes (add / modify / delete)
+* create, update, destroy
 
-* Ruby version
+-------
 
-* System dependencies
+• Downloading PDF of the overview of the personal phone notes
+* pdfkit 
+• Option to send the PDF as an attachment to a predefined (hardcoded) email address
+* ??? 
 
-* Configuration
+----- 
 
-* Database creation
+• Responsive page/listing (desktop – mobile)
+* bootstrap/simple form/
+• Use a javascript date picker
+* jquery ui plugin - railscasts 213 
+• If you have spare time: Implement infinity scroll
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+---- 
+ 
+Furthermore, it requires some restrictions:
+• Add authentication to the whole application — presume it contains sensitive privacy data.
+* root to users#signup
+• Add user self-registration via a web form. Instead of sending a confirmation email, just log the confirmation link. It’s not necessary to provide a user management interface.
+• Add password reset (“forgotten password”) functionality. Here it’s also ok to just log the confirmation link in any place.
+ 
+We suggest:
+- Use a technology of your choice
+- Use MySQL or SQLite database (if you know them)
+- You can use any framework
+- Add at least 5 persons (examples) to the phone notes

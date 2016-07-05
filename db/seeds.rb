@@ -5,3 +5,5 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+notes = Note.create([{name: 'Suzy', phone_number: '+31678901234', date_and_time: 'Tue, 05 Jul 2016 06:00:00 UTC +00:00', body: 'This note is from the seeds.rb file'}])

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  phone_number: MyString
+  date_and_time: 2016-07-05 09:39:22
+  body: MyString
+
+two:
+  name: MyString
+  phone_number: MyString
+  date_and_time: 2016-07-05 09:39:22
+  body: MyString
