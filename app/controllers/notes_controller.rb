@@ -7,6 +7,12 @@ class NotesController < ApplicationController
     @notes = Note.all.order("created_at DESC")
   end
 
+  def send_notes_mail
+    NoteMailer.notes_email.deliver
+    flash[:notice] = "Email has been sent."
+    redirect_to notes_path
+  end 
+
   # GET /notes/1
   # GET /notes/1.json
   def show

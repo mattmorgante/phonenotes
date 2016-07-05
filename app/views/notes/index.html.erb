@@ -30,6 +30,8 @@
 
 <br>
 
-<button class="btn btn-primary"><%= link_to "Download PDF", note_download_path(@notes, :format => "pdf") %></button>
+<button class="btn"><%= link_to "Download PDF", note_download_path(@notes, :format => "pdf") %></button>
+
+<button class="btn"><%= link_to "Send Notes by email", :controller => "notes", :action => "send_notes_mail" %></button>
 <!-- target blank opens it in a new tab/window -->
 <%= link_to 'New Note', new_note_path %>

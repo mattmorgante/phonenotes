@@ -12,9 +12,11 @@ The application should contain the following functionalities:
 -------
 
 • Downloading PDF of the overview of the personal phone notes
-* pdfkit 
+* download PDF button on home page 
+* Finished
 • Option to send the PDF as an attachment to a predefined (hardcoded) email address
-* ??? 
+* actionmailer - send pdf to user.email
+* FINISHED! 
 
 ----- 
 

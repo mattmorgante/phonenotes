@@ -18,6 +18,7 @@ class DownloadsController < ApplicationController
 
   def send_note_pdf
     send_file download.to_pdf, download_attributes
+    NoteMailer.notes_email.deliver_now
   end 
 
   def download_attributes

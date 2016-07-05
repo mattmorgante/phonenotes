@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resource :download, only: [:show]
   end 
   root "notes#index"
+  get :send_notes_mail, to: 'notes#send_notes_mail', as: :send_notes_mail
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
