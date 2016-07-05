@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :notes
+  resources :notes do 
+    # let's make downloads a separate resource instead of complicated notes
+    resource :download, only: [:show]
+  end 
   root "notes#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

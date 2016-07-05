@@ -5,22 +5,6 @@ class NotesController < ApplicationController
   # GET /notes.json
   def index
     @notes = Note.all.order("created_at DESC")
-
-    respond_to do |format| 
-      format.pdf do 
-        render pdf: "my_phone_notes", :layout => "pdf_layout.html.haml"
-      end 
-      format.html
-    end 
-  end
-
-  def download 
-    html = render_to_string(:action => :show, :layout => "pdf_layout.html") 
-    pdf = WickedPdf.new.pdf_from_string(html) 
-
-    send_data(pdf, 
-      :filename => "my_phone_notes", 
-      :disposition => 'attachment') 
   end
 
   # GET /notes/1

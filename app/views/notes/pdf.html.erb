@@ -1,8 +1,4 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Notes</h1>
-
-<table>
+<table class="line-items">
   <thead>
     <tr>
       <th>Name</th>
@@ -14,7 +10,7 @@
   </thead>
 
   <tbody>
-    <% @notes.each do |note| %>
+    <% notes.each do |note| %>
       <tr>
         <td><%= note.name %></td>
         <td><%= note.phone_number %></td>
@@ -27,9 +23,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<button class="btn btn-primary"><%= link_to "Download PDF", note_download_path(@notes, :format => "pdf") %></button>
-<!-- target blank opens it in a new tab/window -->
-<%= link_to 'New Note', new_note_path %>
