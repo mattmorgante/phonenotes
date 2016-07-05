@@ -1,10 +1,7 @@
 class User < ActiveRecord::Base
-  # validates :name, presence: true, length: { maximum: 30 }
-  # validates :email, presence: true, length: { maximum: 160 }
 
   attr_accessor :email, :password, :password_confirmation
   
-  attr_accessor :password
   before_save :encrypt_password
   
   validates_confirmation_of :password

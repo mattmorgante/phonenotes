@@ -1,24 +1,12 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @note.name %>
-</p>
-
-<p>
-  <strong>Phone number:</strong>
-  <%= @note.phone_number %>
-</p>
-
-<p>
-  <strong>Date and time:</strong>
-  <%= @note.date_and_time %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @note.body %>
-</p>
-
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+<div class="container">
+  <h3>Name: <%= @note.name %></h3>
+    <br>  
+  <h5>Phone Number: <%= @note.phone_number %></h5>
+    <br>
+  <h5>Date: <%= @note.date %></h5>
+    <br>
+  <h5>Time: <%= Time.parse(@note.time).strftime('%H:%M:%S') %></h5>
+    <br>
+  <h5>Message: <%= @note.body %></p>
+    <br>
+</div>

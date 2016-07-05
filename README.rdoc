@@ -22,10 +22,12 @@ The application should contain the following functionalities:
 
 • Responsive page/listing (desktop – mobile)
 * bootstrap/simple form/
+* Needs lots of styling
+* Finished 
 • Use a javascript date picker
 * To Do: Have to integrate the new "time" column in the database
 * jquery ui plugin - railscasts 213 
-
+* Finished 
 • If you have spare time: Implement infinity scroll
 
 ---- 
@@ -33,8 +35,11 @@ The application should contain the following functionalities:
 Furthermore, it requires some restrictions:
 • Add authentication to the whole application — presume it contains sensitive privacy data.
 * root to users#signup
+* need something like if user_not_signed_in, redirect_to sign_up
 • Add user self-registration via a web form. Instead of sending a confirmation email, just log the confirmation link. It’s not necessary to provide a user management interface.
+* Finished 
 • Add password reset (“forgotten password”) functionality. Here it’s also ok to just log the confirmation link in any place.
+
  
 We suggest:
 - Use a technology of your choice

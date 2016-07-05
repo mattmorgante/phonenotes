@@ -3,4 +3,4 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 jQuery ->
- $('#note_date_and_time').datepicker()
+ $('#note_date').datepicker()
