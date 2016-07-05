@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
+  get '/signup', to: 'users#new'
+
   resources :notes do 
     # let's make downloads a separate resource instead of complicated notes
     resource :download, only: [:show]
   end 
-  root "notes#index"
   get :send_notes_mail, to: 'notes#send_notes_mail', as: :send_notes_mail
+
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  get "log_in" => "sessions#new", :as => "log_in"
+  get "sign_up" => "users#new", :as => "sign_up"
+  root :to => "users#new"
+  resources :users
+  resources :sessions
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

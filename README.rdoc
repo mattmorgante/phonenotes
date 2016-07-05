@@ -23,11 +23,13 @@ The application should contain the following functionalities:
 • Responsive page/listing (desktop – mobile)
 * bootstrap/simple form/
 • Use a javascript date picker
+* To Do: Have to integrate the new "time" column in the database
 * jquery ui plugin - railscasts 213 
+
 • If you have spare time: Implement infinity scroll
 
 ---- 
- 
+
 Furthermore, it requires some restrictions:
 • Add authentication to the whole application — presume it contains sensitive privacy data.
 * root to users#signup
