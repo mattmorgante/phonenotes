@@ -20,7 +20,7 @@
           <td><%= note.name %></td>
           <td><%= note.phone_number %></td>
           <td><%= note.date %></td>
-          <td><%= Time.parse(note.time).strftime('%H:%M:%S') %></td>
+          <td><%= note.time.strftime("%H:%M:%S") %></td>
           <td><%= note.body %></td>
           <td> 
             <div class="btn-group">
@@ -42,14 +42,13 @@
   <br>
 
   <button class="btn"><%= link_to "Download PDF", note_download_path(@notes, :format => "pdf") %></button>
-  <br><br>
   <button class="btn"><%= link_to "Send Notes By Email", :controller => "notes", :action => "send_notes_mail" %></button>
-  <br>
+  <button class="btn"><%= link_to 'New Note', new_note_path %></button>
   <% else %>
 
   <h3> No notes to display. Get started by making your first note!</h3>
-  <br>
+  <button class="btn"><%= link_to 'New Note', new_note_path %></button>
   <% end %>
   <br>
-  <button class="btn"><%= link_to 'New Note', new_note_path %></button>
+
 </div>

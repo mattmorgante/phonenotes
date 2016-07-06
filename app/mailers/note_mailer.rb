@@ -4,7 +4,7 @@ class NoteMailer < ApplicationMailer
  
   def notes_email
     @notes = Note.all
-    email = "stefjeroordink@gmail.com"
+    email = "matthewmorgante@gmail.com"
     attachments['my_notes.pdf'] = File.read('tmp/notes.pdf')
     mail(to: email, subject: 'Your Phone Notes')
   end

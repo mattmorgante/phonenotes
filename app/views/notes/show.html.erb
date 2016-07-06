@@ -5,7 +5,7 @@
     <br>
   <h5>Date: <%= @note.date %></h5>
     <br>
-  <h5>Time: <%= Time.parse(@note.time).strftime('%H:%M:%S') %></h5>
+  <h5>Time: <%= @note.time.strftime("%H:%M:%S") %></h5>
     <br>
   <h5>Message: <%= @note.body %></p>
     <br>

@@ -1,14 +1,16 @@
 class NotesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_note, only: [:show, :edit, :update, :destroy]
 
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.all.order("created_at DESC")
+    notes = Note.all.order("created_at DESC")
+    @notes = current_user.notes
   end
 
   def send_notes_mail
-    NoteMailer.notes_email.deliver
+    NoteMailer.notes_email.deliver_now
     flash[:notice] = "Email has been sent."
     redirect_to notes_path
   end 
@@ -31,7 +33,7 @@ class NotesController < ApplicationController
   # POST /notes.json
   def create
     @note = Note.new(note_params)
-
+    @note.user_id = current_user.id
     respond_to do |format|
       if @note.save
         format.html { redirect_to @note, notice: 'Note was successfully created.' }
@@ -70,11 +72,11 @@ class NotesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_note
-      @note = Note.find(params[:id])
+      @note = current_user.notes.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def note_params
-      params.require(:note).permit(:name, :phone_number, :date, :time, :body)
+      params.require(:note).permit(:name, :phone_number, :date, :time, :body, :user_id)
     end
 end

@@ -1,25 +1,23 @@
-<table class="line-items">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Phone Number</th>
-      <th>Date and Time</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% notes.each do |note| %>
+  <table class="table table-striped table-bordered">
+    <thead>
       <tr>
-        <td><%= note.name %></td>
-        <td><%= note.phone_number %></td>
-        <td><%= note.date_and_time %></td>
-        <td><%= note.body %></td>
-        <td><%= link_to 'Show', note %></td>
-        <td><%= link_to 'Edit', edit_note_path(note) %></td>
-        <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th class="center">Name</th>
+        <th class="center">Phone Number</th>
+        <th class="center">Date</th>
+        <th class="center">Time</th>
+        <th class="center">Body</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% notes.each do |note| %>
+        <tr>
+          <td><%= note.name %></td>
+          <td><%= note.phone_number %></td>
+          <td><%= note.date %></td>
+          <td><%= note.time.strftime("%H:%M:%S") %></td>
+          <td><%= note.body %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

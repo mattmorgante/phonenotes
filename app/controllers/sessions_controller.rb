@@ -1,4 +1,5 @@
 class SessionsController < ApplicationController
+  # before_filter :save_login_state, :only => [:log_in]
 
   def new
   end
@@ -7,7 +8,7 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:email], params[:password])
     if user
       session[:user_id] = user.id
-      redirect_to root_url, :notice => "Logged in!"
+      redirect_to notes_path, :notice => "Logged in!"
     else
       flash.now.alert = "Invalid email or password"
       render "new"
