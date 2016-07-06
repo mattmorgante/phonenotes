@@ -1,10 +1,13 @@
 ## Get Started 
 #### Prerequisites
+
+To run the app on your machine, you need: 
 * Rails 4+
 * Ruby 2+ 
 * Bundler
 
 #### Instructions
+To get up and running, do the following:
 * git clone https://github.com/mattmorgante/phonenotes.git
 * cd phonenotes 
 * bundle install
@@ -67,17 +70,17 @@ Furthermore, it requires some restrictions:
 
 * Add password reset (“forgotten password”) functionality. Here it’s also ok to just log the confirmation link in any place.
 
-** On the login page, click "Forgot your password" to log a confirmation link **
+**On the login page, click "Forgot your password" to log a confirmation link **
 
 We suggest:
 
 - Use a technology of your choice
 
-**This app uses Rails 4.2.6 and Ruby 2.1.2
+**This app uses Rails 4.2.6 and Ruby 2.1.2**
 
 - Use MySQL or SQLite database (if you know them)
 
-**Uses SQLite3
+**Uses SQLite3**
 
 - Add at least 5 persons (examples) to the phone notes
 
