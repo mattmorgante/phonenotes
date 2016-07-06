@@ -44,11 +44,12 @@ The application should contain the following functionalities:
 
 * Downloading PDF of the overview of the personal phone notes
 
-**Click "Download PDF" on the Home Page notes#index to download a formatted PDF of all notes
+**Click "Download PDF" on the Home Page notes#index to download a formatted PDF of all notes**
+**PDF functionality is defined in the download model (download.rb) and downloads_controller.rb**
 
 * Option to send the PDF as an attachment to a predefined (hardcoded) email address
 
-**Click "Send Notes By Email" to send notes to a hardcoded email address. Prior to sending, you will need to specify your email address and email password in development.rb**
+**Click "Send Notes By Email" to send notes to a hardcoded email address. NOTE: Prior to sending, you will need to specify your email address and email password in development.rb**
 
 * Responsive page/listing (desktop – mobile)
 

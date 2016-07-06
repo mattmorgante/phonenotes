@@ -9,7 +9,7 @@ class DownloadsController < ApplicationController
   private 
 
   def note 
-    Note.all
+    Note.where(user: current_user).order("created_at DESC")
   end 
 
   def download 
