@@ -10,9 +10,11 @@
 * bundle install
 * rake db:create 
 * rake db:migrate
-If you want to create your own users, go ahead and do so in the browser by running 
+
+**If you want to create your own users, go ahead and do so in the browser by running**
 * rails s
-Otherwise, you can create the users from the seed file by uncommenting the Users and Notes in seed.rb and running
+
+**Otherwise, you can create the users from the seed file by uncommenting the Users and Notes in seed.rb and running**
 * rake db:seed
 
 ## Requirements
@@ -25,21 +27,21 @@ A phone note contains the following information:
 * date and time of the call
 * notes
 
-** Please see schema.rd for information regarding the note model. Each note contains name, phone_number, body, time, and data, as well as a user_id for authentication**
+**Please see schema.md for information regarding the note model. Each note contains name, phone_number, body, time, and data, as well as a user_id for authentication
 
 The application should contain the following functionalities:
 
 * An overview (listing) of your own notes only sorted by date/time (descending order)
 
-** In the notes controller, index action, notes are sorted by the date**
+**In the notes controller, index action, notes are sorted by the date**
 
 * Editing of only your personal notes (add / modify / delete)
 
-**login using email:user1@gmail.com password:12345678 - you can see 5 notes by no other user can view these notes**
+**login using email:user1@gmail.com password:12345678 - you can see notes by user1 that no other user can view**
 
 * Downloading PDF of the overview of the personal phone notes
 
-** Click "Download PDF" on the Home Page notes#index to download a formatted PDF of all notes
+**Click "Download PDF" on the Home Page notes#index to download a formatted PDF of all notes
 
 * Option to send the PDF as an attachment to a predefined (hardcoded) email address
 
@@ -47,17 +49,17 @@ The application should contain the following functionalities:
 
 * Responsive page/listing (desktop – mobile)
 
-** This app uses bootstrap for styling ** 
+**This app uses bootstrap for styling** 
 
 * Use a javascript date picker
 
-** On both the new and edit actions of the note, you can click in the "Date" box to utilize the jquery datepicker**
+**On both the new and edit actions of the note, you can click in the "Date" box to utilize the jquery datepicker**
 
 Furthermore, it requires some restrictions:
 
 * Add authentication to the whole application — presume it contains sensitive privacy data.
 
-**login using email:user1@gmail.com password:12345678 - you can see 5 notes by no other user can view these notes**
+**As mentioned above, login using email:user1@gmail.com password:12345678 - you can see notes by user1 that no other user can view**
 
 * Add user self-registration via a web form. Instead of sending a confirmation email, just log the confirmation link. It’s not necessary to provide a user management interface.
 
@@ -70,9 +72,11 @@ Furthermore, it requires some restrictions:
 We suggest:
 
 - Use a technology of your choice
+
 **This app uses Rails 4.2.6 and Ruby 2.1.2
 
 - Use MySQL or SQLite database (if you know them)
+
 **Uses SQLite3
 
 - Add at least 5 persons (examples) to the phone notes
@@ -84,4 +88,4 @@ We suggest:
 * user4@gmail.com
 * user5@gmail.com
 
-**All passwords are 12345678 **
+**All passwords are 12345678**
